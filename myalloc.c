@@ -98,7 +98,7 @@ int main(){
     myalloc(20); print_data();
     myalloc(30); print_data();
     myalloc(40); print_data();
-    myalloc(50); print_data();*/
+    myalloc(50); print_data();
     void *p;
 
     myalloc(10);     print_data();
@@ -107,4 +107,5 @@ int main(){
     myfree(p);       print_data();
     myalloc(40);     print_data();
     myalloc(10);     print_data();
+    */
 }
