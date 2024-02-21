@@ -55,6 +55,8 @@ void myfree(void *p){
         if(PTR_OFFSET(temp,PADDED_SIZE(sizeof(struct block)))==p){
             temp->in_use=0;
             temp=NULL;
+        }else{
+            temp=temp->next;
         }
     }
 }
@@ -83,6 +85,7 @@ void print_data(void)
 }
 
 int main(){
+    /*
     void *p;
 
     p = myalloc(512);
@@ -90,4 +93,18 @@ int main(){
 
     myfree(p);
     print_data();
+
+    myalloc(10); print_data();
+    myalloc(20); print_data();
+    myalloc(30); print_data();
+    myalloc(40); print_data();
+    myalloc(50); print_data();*/
+    void *p;
+
+    myalloc(10);     print_data();
+    p = myalloc(20); print_data();
+    myalloc(30);     print_data();
+    myfree(p);       print_data();
+    myalloc(40);     print_data();
+    myalloc(10);     print_data();
 }
